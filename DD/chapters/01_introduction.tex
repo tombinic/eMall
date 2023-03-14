@@ -1,0 +1,105 @@
+\chapter{Introduction}
+\section{Purpose}
+The goal of \textbf{D}esign \textbf{D}ocument lies in a meticulous explanation of the infrastructure that the eMall system uses: reference will be made to a high-level description of the technologies and components used paying attention also to the interactive behavior of system users.\\
+The audience of the presented document includes certainly teams of developers who have to implement all the features.
+\section{Scope}
+Electric mobility for All (eMall) is a user-friendly application which is intended to facilitate the
+use of the system to electric vehicle owners and charging station administrators.\\
+To reach these goals, the eMSP provides an interface for end users that allow them to search
+for a nearby charging station that has a certain type of charging sockets (slow, fast, rapid),
+visualizing also its special offers providing a full integrated payment system that enable end users to pay for
+the service. Consequently, end users can charge their vehicles in a specific station by reserving a time slot receiving a notification when charge is completed. This feature allows to avoid traffic at the station and reduce the contemporary presence of vehicles.\\
+The eMSP software also proposes a very smart feature: indeed, eMSP is able to proactively suggest the user to go and charge the vehicle, depending on the status of the
+battery, his schedule, the special offers made available by some
+CPOs, and the availability of charging slots at the identified stations.\\
+Through the Web App (CPMS) managed by CPOs includes also a charging station management system which is used by the charging station administrators to manage the infrastructure (batteries, etc) of charging stations and, moreover, it has the possibility to buy the energy from 3rd parties in the smartest
+possible way and distribute it to end user vehicles. The managment system will also keep
+track of the internal and external status of each charging station respecting the physical
+constraints of the infrastructure.
+\section{Definitions, Acronyms, Abbreviations}
+\subsection{Definitions}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{B8C8D5} 
+\textbf{Term}    & \multicolumn{1}{c|}{\cellcolor[HTML]{B8C8D5}\textbf{Definition}}        \\ \hline
+End user        & \begin{tabular}[c]{@{}l@{}}Identifies electric vehicles owners who use the service, \\ can also be referred as user.\end{tabular}                \\ \hline
+Charging station & Place of charging of electric vehicles.                                 \\ \hline
+Charging Station available &\begin{tabular}[c]{@{}l@{}} At the moment at least one socket is free\end{tabular} \\ \hline
+Charging Station not available &\begin{tabular}[c]{@{}l@{}} At the moment all the sockets are occupied\end{tabular} \\ \hline
+Charging socket  & Single charging point.                                                  \\ \hline
+Booking   &  \begin{tabular}[c]{@{}l@{}}Reserved time slot generated from the system for \\charging vehicles. It also can be referred to Reservation.\end{tabular}     \\ \hline
+Time slot        & Slot of time in which custumers can charge their vehicles.               \\
+\hline
+QR-Code &  \begin{tabular}[c]{@{}l@{}} A QR code is a type of matrix barcode (or two-\\dimensional barcode). \end{tabular}  \\ \hline
+System &
+  \begin{tabular}[c]{@{}l@{}}Set of hardware and software tools, that provide the \\ desired service. It can be considered as eMall,\\ Application and Platform.\end{tabular} \\ \hline
+  Internal status &
+  \begin{tabular}[c]{@{}l@{}}For internal status of a charging station: the \\ amount of energy available in its batteries, the number \\ of vehicles being charged and, for each charging vehicle, \\the amount of power absorbed and time left to the end\\ of the charge. \end{tabular} \\ \hline
+    External status &\begin{tabular}[c]{@{}l@{}}For external status of a charging station:\\the number of charging sockets available, their type \\ such as slow/fast/rapid, their cost, and, if all sockets\\ of a certain type are occupied, the estimated amount \\of time until the first socket of that type is freed. \end{tabular} \\ \hline
+        CPO &\begin{tabular}[c]{@{}l@{}} The charging station's administrator.\end{tabular} \\ \hline
+         WebSocket &\begin{tabular}[c]{@{}l@{}} WebSocket is a full-duplex communication protocol that\\ enables bi-directional communication between a client\\ and a server over a single, long-lived connection\end{tabular} \\ \hline
+\end{tabular}
+}
+\end{table}
+\subsection{Acronyms}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{B8C8D5} 
+\textbf{Acronyms} & \multicolumn{1}{c|}{\cellcolor[HTML]{B8C8D5}\textbf{Meaning}} \\ \hline
+eMall             & e-Mobility for All                                            \\ \hline
+eMSP              & e-Mobility Service Provider                                   \\ \hline
+CPO               & Charging Point Operator                                       \\ \hline
+CPMS              & Charging Point Management System                              \\ \hline
+DSO               & Distribution System Operator                                  \\ \hline
+API               & Application Programming Interface                             \\ \hline
+GPS               & Global Positioning System                                     \\ \hline
+HTTP          & Hyper Text Transfer Protocol                           \\ \hline
+SMTP          & Simple Mail Transfer Protocol                           \\ \hline
+SHA-256           & Secure Hash Algorithm                                \\ \hline
+DB                 & Database                                               \\ \hline
+DBMS               & Database management system                                                 \\ \hline
+\end{tabular}
+
+\end{table}
+\subsection{Abbreviations}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{B8C8D5} 
+\textbf{Abbreviations} & \multicolumn{1}{c|}{\cellcolor[HTML]{B8C8D5}\textbf{Meaning}} \\ \hline
+R  & Requirement             \\ \hline
+w.r.t. & With reference to \\ \hline
+e.g. & exempli gratia \\ \hline
+i.e. & Id est \\ \hline
+etc. & Etcetera \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+\section{Reference Documents}
+\begin{itemize}
+    \item \emph{Course slides on WeeBeep.}
+    \item \emph{DD assignament document.}
+    \item \emph{DD review by Prof. M. Camilli.}
+    \item \emph{RASD eMall system}
+\end{itemize}
+
+\section{Document Structure}
+This section presents the structure of the document:
+\begin{enumerate}
+    \item \textbf{Introduction}: this is the first section and provide an overview of the entire document and descriptions of the main eMall functions.
+    \item \textbf{Architectural Design}: this section should provide an high-level analysis of functionalities, responsibilities and the main components of the entire system.\\
+    Describes also how strategies that will be used will affect the system and also focuses
+    on the main architectural styles and patterns adopted in the design of the system.
+    \item \textbf{User Interface Design}: here the graphical interfaces of the users are shown through the relative UI mockups as in the RASD document. Furthermore, it is also used to describe all the possible functions that users can exploit to achieve eMall goals.
+    \item \textbf{Requirements traceability}: it allows to map, in a tabular form, the functional requirements of the RASD with the requirements analyzed and considered in this DD.
+    \item \textbf{Implementation, Integration and Test Plan}: there it is described how the system is implemented and how the different components of the application are integrated. Moreover, a detailed description is provided on how system tests are implemented.
+    \item \textbf{Effort Spent}: in this section, through the use of a table, all the hours of work spent by each member of the group are defined.
+    \item \textbf{References}: this section lists the various documents consulted and analyzed.
+\end{enumerate}

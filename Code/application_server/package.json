@@ -1,0 +1,31 @@
+{
+  "name": "application_server",
+  "version": "1.0.0",
+  "description": "Application Server eMall",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "Balestrieri Niccolò, Bertogalli Andrea, Tombini Nicolò",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "expect": "^29.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "geolib": "^3.3.3",
+    "mysql": "^2.18.1",
+    "node-open-geocoder": "^4.0.1",
+    "nodemon": "^2.0.20",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.6",
+    "reverse-geocoding": "^3.0.2",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3"
+  }
+}

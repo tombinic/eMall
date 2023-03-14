@@ -1,0 +1,71 @@
+\chapter{Installation Instructions}
+\section{Server}
+Here we will illustrate the procedures to follow to deploy the server in a Windows system.
+\subsection{MySQL}
+\begin{enumerate}
+    \item \textbf{Download the MySQL installer}: Go to the MySQL website and download the MySQL installer for your operating system.
+    \item \textbf{Run the installer}: Double-click the downloaded file to start the installation process. Follow the on-screen instructions to complete the installation process.
+    \item \textbf{Choose a setup type}: Select the "Custom" setup type to have more control over the installation process.
+    \item \textbf{Configure the MySQL server}: Set the configuration options as per your requirements. You can choose to install the MySQL as a Windows service or configure the port number that the MySQL server will listen on.
+    \item \textbf{Create a root user}: During the installation process, you will be prompted to create a root user. This is the administrative user for your MySQL server and will have full access to all databases.
+    \item \textbf{Complete the installation}: Finish the installation process and start the MySQL server.
+    \item \textbf{Verify the installation}: To verify that the installation was successful, open the command line interface and run the command "mysql -u root -p". If the installation was successful, you should be able to connect to the MySQL server and run SQL commands.
+\end{enumerate}
+For sake of simplicity, we recommend to install \textbf{XAMPP} software which automatically installs all the essential to run the database engine.
+\subsubsection{Database Setup}
+In the \emph{Code/DBMS} folder there is the file .sql to import into your database. To set the credentials you will need to go to the \emph{Code/application-server/index.js}.
+\subsection{NodeJS}
+To install NodeJS follow the following instruction:
+\begin{enumerate}
+    \item \textbf{Check the system requirements}: Node.js requires a minimum of 64-bit version of either Windows, macOS, or Linux.
+    \item \textbf{Download the latest version of Node.js}: Visit the official website (https://nodejs.org) and click on the "Download" button to download the latest version of Node.js.
+    \item \textbf{Install Node.js}: Double-click the downloaded executable file and follow the instructions on the screen to install Node.js. On macOS and Linux, you may need to use the terminal to install Node.js.
+    \item \textbf{Verify the installation}: Open the terminal (on macOS and Linux) or the Command Prompt (on Windows) and run the following command: node -v. This will display the version of Node.js that you have installed.
+    \item \textbf{Update the PATH environment variable}: To run Node.js from any location on your system, you need to update the PATH environment variable.
+\end{enumerate}
+\subsection{Application server setup}
+\begin{enumerate}
+    \item Go to \emph{Code/application\_server}
+    \item Open Command Prompt there
+    \item Run node index.js
+    \item Now the server is running on \emph{http://localhost:3000}: if you want to change it, you have to go at \emph{Code/application\_server/index.js} and change the default port.
+\end{enumerate}
+\section{Client}
+Here we will illustrate the instruction to install all the three clients (CPO App, EndUser App and Charging socket app).
+\subsection{EndUser App}
+\begin{enumerate}
+    \item \textbf{Download the Flutter SDK}: Visit the Flutter website (flutter.dev) and download the latest version of the Flutter SDK. Extract the ZIP file to a location of your choice.
+    \item \textbf{Set the PATH environment variable}: Add the Flutter SDK's bin directory to your PATH environment variable. This will allow you to run the Flutter command-line tools from any terminal window.
+    \item \textbf{Verify the installation}: Open a terminal window and run the following command: "flutter doctor." This will check if there are any dependencies missing on your system and provide instructions on how to install them.
+\end{enumerate}
+Then to run a Flutter Project:
+\begin{enumerate}
+    \item Navigate to the project directory \emph{Code/end\_user\_app}
+    \item Run the project: Run the following command: "flutter run --no-sound-null-safety". This will compile and run your Flutter app on an emulator or a connected physical device.
+\end{enumerate}
+\emph{\underline{NOTE:}}
+\begin{itemize}
+    \item Before you run the project, make sure you have an emulator or a connected physical device. If you don't have one, you can create an emulator in the Android or iOS emulator.
+    \item In case of any error go to \emph{Code/end\_user\_app/.vscode/launch.json} and add this: \emph{            "args": [
+                "--no-sound-null-safety"
+               ]} 
+    \item We discovered that on a specific smartphone you may have some issues in pressing some buttons.
+\end{itemize}
+\emph{\underline{CONFIGURATION NOTE:}}
+\begin{itemize}
+    \item We also provide the apk file inside the folder \emph{APKs/eMallUser.apk}
+    \item The first time you enter in the application, will be required to setup the IP address in which application server is running. Every time you logout from the user settings, the configuration of the address above will be required.
+\end{itemize}
+\subsection{CPO App}
+To try the CPO App you should follow these steps:
+\begin{enumerate}
+    \item Install Node.js and npm (Node Package Manager) if you haven't already \\(\emph{https://nodejs.org/it/download/}).
+    \item  Open your terminal and navigate to the project directory (\emph{Code/cpo\_app/}).
+    \item Run the command \emph{npm install} to install all the dependencies.
+    \item Run npm to start the development (\emph{npm start}) server and launch the project in the browser.
+    \item Now wait for the project to be loaded, then you should navigate to \emph{http://localhost:3000}.
+\end{enumerate}
+\emph{\underline{NOTES:} The React App can be merged into the Node.Js application server, but once deployed the code and the configurations are no longer available, so for this reason we decided to leave it in development mode (For the moment).}
+\\\\\emph{\underline{CONFIGURATION NOTES:} The HTTP APIs address and the WebSocket APIs address can be modified from the Config.js file in the src folder in the project.}
+\subsection{Charging socket App}
+The APK file is stored \emph{code/APKs/ChargingSocket.apk}. The code of the application is stored in \emph{code/ChargingSocket}, you can open the project with AndroidStudio (\emph{https://developer.android.com/}).

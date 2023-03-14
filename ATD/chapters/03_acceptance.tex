@@ -1,0 +1,402 @@
+\chapter{Acceptance test cases}
+Initially, we compared the documents provided along with the application code, The first thing we noticed is that the the introductory chapter is identical in both RASD and DD, so we think that there is a lack of attention on this aspect.
+Due to the fact explained above in the introduction chapter in the DD the document structure doesn't follow the guidlines provided during the course.
+\\\\
+Some sections of the RASD are quite short, and perhaps some diagrams are missing, but overall the document is clear and well structured. The \textbf{Formal analysis using alloy} maybe is too short and lacks details such as assertions and predicates, also no world is reported.
+\\\\
+Also for the DD, there are some flaws to report. The non-high-level component diagram components are missing and the descriptions are a bit offhand. In the deployment, a more detailed explanation of the tiers could have been useful for those reading the document. In the runtime view, it would have been useful to have a short but concise description of the sequence diagrams, however they are well done. The \textbf{Other Design Decision} chapter has not been developed but left within the document, the description of the database structure using the \textbf{er schema} and the \textbf{relational schema} would have been appropriate. The flow diagrams of the emsp and cpms are missing in the user interface design. The \textbf{Requirement Traceability} are well done. The \textbf{Implementation, Integration, and Test Plan} could be more detailed, but it is good.
+\\\\
+The installation guide is clear for what is written, but some steps should be added that may come in handy to make the installation easier.
+\\\\
+Before testing the application in actual usage conditions, we wanted to make sure that the basic building blocks and functionalities of the application were working as intended. This is why we tested the application following the tests provided in the ITD, which are designed to test the single functionalities of the application.
+\\
+Then we have tested the application in realistic scenarios, to see how it performs when used by a realistic user.
+\\\\
+Therefore, we tried various test cases to simulate different types of user interactions with the application, and monitored its performance in each scenario. These tests covered various aspects of the application, from functionality and usability, to security and performance. 
+\\\\
+The majority of the tests that were performed are listed in the following section for reference.
+\clearpage
+
+\section{Test cases}
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT001\_User\_SignUp\\ \hline
+\textbf{Description} &  Creation of a new user.\\ \hline
+\textbf{Input} &  Data required in the form.\\ \hline
+\textbf{Expected output} &  New account creation.\\ \hline
+\textbf{Test results} &  New account created.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT002\_User\_SignIn\\ \hline
+\textbf{Description} &  Login into user account.\\ \hline
+\textbf{Input} &  Username and password.\\ \hline
+\textbf{Expected output} &  Dashboard access.\\ \hline
+\textbf{Test results} &  Dashboard viewed correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT003\_User\_SignOut\\ \hline
+\textbf{Description} &  Logout from user profile.\\ \hline
+\textbf{Input} &  None.\\ \hline
+\textbf{Expected output} &  User correctly logs out. \\ \hline
+\textbf{Test results} &  The user logs out correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT004\_User\_UpdateAccount\\ \hline
+\textbf{Description} &  The user can edit the information of his profile.\\ \hline
+\textbf{Input} &  Requested form inputs.\\ \hline
+\textbf{Expected output} &  The information updates correctly. \\ \hline
+\textbf{Test results} &  The information updates correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  In the phone number field there aren't any format control.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT005\_User\_SearchStation\\ \hline
+\textbf{Description} &  The sistem shows to the user the nerby stations.\\ \hline
+\textbf{Input} &  None\\ \hline
+\textbf{Expected output} &  The nearby station are shown correctly. \\ \hline
+\textbf{Test results} &  The nearby stations are shown.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT006\_User\_BookCharge\\ \hline
+\textbf{Description} &  The user can book a time-slot in a station.\\ \hline
+\textbf{Input} &  The socket type.\\ \hline
+\textbf{Expected output} &  The nearby station are shown correctly \\ \hline
+\textbf{Test results} &  The nearby stations are shown.\\ \hline
+\textbf{Outcome} &  Positive \\ \hline
+\textbf{Notes} &  It's not possible to book for a specific date, only at the current time.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT007\_Cpo\_SignUp\\ \hline
+\textbf{Description} &  Creation of a new cpo.\\ \hline
+\textbf{Input} &  Data required in the form.\\ \hline
+\textbf{Expected output} &  New cpo account creation.\\ \hline
+\textbf{Test results} &  New cpo account created.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & \begin{tabular}[c]{@{}l@{}}
+    The password can't be choosed, all the accounts have the same \\password
+\end{tabular}\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT008\_Cpo\_SignIn\\ \hline
+\textbf{Description} &  Login into cpo account.\\ \hline
+\textbf{Input} &  Email and password.\\ \hline
+\textbf{Expected output} &  Dashboard access.\\ \hline
+\textbf{Test results} &  Dashboard viewed correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT009\_Cpo\_SignOut\\ \hline
+\textbf{Description} &  Logout from cpo profile.\\ \hline
+\textbf{Input} &  None.\\ \hline
+\textbf{Expected output} &  Cpo correctly logs out. \\ \hline
+\textbf{Test results} &  The Cpo logs out correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT010\_Cpo\_UpdateAccount\\ \hline
+\textbf{Description} &  The cpo can edit the information of his profile.\\ \hline
+\textbf{Input} &  .\\ \hline
+\textbf{Expected output} &  The information are updated. \\ \hline
+\textbf{Test results} &  The information are updated correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & No format control in update form.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT011\_Cpo\_AddStation\\ \hline
+\textbf{Description} &  The cpo can add a station.\\ \hline
+\textbf{Input} &    Requested form inputs.\\ \hline
+\textbf{Expected output} &  The station is insterted. \\ \hline
+\textbf{Test results} &  The station is inserted correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT012\_Cpo\_EditStation\\ \hline
+\textbf{Description} &  The cpo can edit a station.\\ \hline
+\textbf{Input} &    Requested form inputs.\\ \hline
+\textbf{Expected output} &  The station is modified. \\ \hline
+\textbf{Test results} &  The station is modified correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT013\_Cpo\_DeleteStation\\ \hline
+\textbf{Description} &  The cpo can delete a station.\\ \hline
+\textbf{Input} &    None.\\ \hline
+\textbf{Expected output} &  The station is deleted. \\ \hline
+\textbf{Test results} &  The station is removed correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT014\_Cpo\_AddSocket\\ \hline
+\textbf{Description} &  The cpo can add a Chrging socket.\\ \hline
+\textbf{Input} &    Requested form inputs.\\ \hline
+\textbf{Expected output} &  The Charging socket is created. \\ \hline
+\textbf{Test results} &  The Charging socket is created correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT015\_Cpo\_DeleteSocket\\ \hline
+\textbf{Description} &  The cpo can delete a Chrging socket.\\ \hline
+\textbf{Input} &    None.\\ \hline
+\textbf{Expected output} &  The Charging socket is deleted. \\ \hline
+\textbf{Test results} &  The Charging socket is deleted correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT016\_Cpo\_ModifySocket\\ \hline
+\textbf{Description} &  The cpo can modify a Chrging socket.\\ \hline
+\textbf{Input} &    Requested form inputs.\\ \hline
+\textbf{Expected output} &  The Charging socket is updated. \\ \hline
+\textbf{Test results} &  The Charging socket is updated correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT017\_Cpo\_AddPriceStrat\\ \hline
+\textbf{Description} &  The cpo can add a pricing strategy.\\ \hline
+\textbf{Input} &    Requested form inputs.\\ \hline
+\textbf{Expected output} &  The pricing strategy is inserted. \\ \hline
+\textbf{Test results} & The pricing strategy is inserted correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT018\_Cpo\_ModifyPriceStrat\\ \hline
+\textbf{Description} &  The cpo can modify a pricing strategy.\\ \hline
+\textbf{Input} &    Requested form inputs.\\ \hline
+\textbf{Expected output} &  The pricing strategy is modified. \\ \hline
+\textbf{Test results} & The pricing strategy is modified correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT019\_Cpo\_DeletePriceStrat\\ \hline
+\textbf{Description} &  The cpo can delete a pricing strategy.\\ \hline
+\textbf{Input} &   None.\\ \hline
+\textbf{Expected output} &  The pricing strategy is deleted. \\ \hline
+\textbf{Test results} & The pricing strategy is deleted correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT020\_Dso\_SignUp\\ \hline
+\textbf{Description} &  Creation of a new dso.\\ \hline
+\textbf{Input} &  Data required in the form.\\ \hline
+\textbf{Expected output} &  New dso account creation.\\ \hline
+\textbf{Test results} &  New dso account created.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & \begin{tabular}[c]{@{}l@{}}
+    The password can't be choosed, all the accounts have the same \\password.
+\end{tabular}\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT021\_Dso\_SignIn\\ \hline
+\textbf{Description} &  Login with a dso.\\ \hline
+\textbf{Input} &  Email and password.\\ \hline
+\textbf{Expected output} & The dso logs into his account.\\ \hline
+\textbf{Test results} &  The dso logs into his account correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & \begin{tabular}[c]{@{}l@{}}
+    None.
+\end{tabular}\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT022\_DsoCpo\_Link\\ \hline
+\textbf{Description} &  Allow to link a dso with a cpo.\\ \hline
+\textbf{Input} &  Required form inputs.\\ \hline
+\textbf{Expected output} & Cpo and Dso linked together.\\ \hline
+\textbf{Test results} &  Cpo and Dso linked together correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & \begin{tabular}[c]{@{}l@{}}
+    It would have been better to associate a CPO with a \\charging station.
+\end{tabular}\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT023\_Dso\_SignOut\\ \hline
+\textbf{Description} &  Logout from dso profile.\\ \hline
+\textbf{Input} &  None.\\ \hline
+\textbf{Expected output} &  Dso correctly logs out. \\ \hline
+\textbf{Test results} &  The Dso logs out correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} &  None.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT024\_Dso\_UpdateAccount\\ \hline
+\textbf{Description} &  The dso can edit the information of his profile.\\ \hline
+\textbf{Input} &  .\\ \hline
+\textbf{Expected output} &  The information are updated. \\ \hline
+\textbf{Test results} &  The information are updated correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & No format control in update form.\\ \hline
+\end{tabular}%
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{B8C8D5}}l |l|}
+\hline
+\textbf{Id} &  AT025\_Dso\_SetPrice\\ \hline
+\textbf{Description} &  The dso set the price of energy.\\ \hline
+\textbf{Input} &  .\\ \hline
+\textbf{Expected output} &  The price is updated. \\ \hline
+\textbf{Test results} &  The price is updated correctly.\\ \hline
+\textbf{Outcome} &  Positive. \\ \hline
+\textbf{Notes} & None.\\ \hline
+\end{tabular}%
+\end{table}

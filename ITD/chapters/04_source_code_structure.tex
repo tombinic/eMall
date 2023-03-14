@@ -1,0 +1,51 @@
+\chapter{Source Code Structure}
+\section{Server Side}
+The server side is divided in two parts, one handles the HTTP RESTful APIs while the second one manages the WebSockets event. The HTTP part is composed by three js modules: the \textbf{EmspHanlder} which handles the eMSP queries, the \textbf{CmpsHandler} which handles the CPMS queries and the \textbf{SharedHandler} which handles the common APIs between the emsp and cpms such as the login and the registration.
+\subsection{EmspHandler}
+This module handles all the APIs related to the eMSP, we can categorize them essentially into three categories:
+\begin{itemize}
+    \item \textbf{Maps APIs}: The emspHandler includes the interaction with external maps api which are helpful to convert some geo-related data that help the eMSP to show the various charging stations on the map.
+    \item\textbf{Bookings APis}: The main part of the emspHandler is composed by booking managment APIs, in fact these APIs allow the eMSP to perform all the operations on the user's bookings.
+    \item \textbf{Personal APIs}: As for the CPO also the End user can modify his personal data, so various APIs with this purpose are provided.
+\end{itemize}
+\subsection{CpmsHandler}
+This module contains the APIs that are used exclusively by the CPMS system. In general we can find three categories of APIs:
+\begin{itemize}
+    \item \textbf{Charging station APIs}: These are the APIs used by the CPMS to manage the stations.
+    \item \textbf{DSO APIs}: These are the APIs used by the CPMS to interact with the DSO (the DSO is simulated).
+    \item \textbf{CPO profile APIs}: These are the APIs used by the CPMS to manage the CPO account data.
+\end{itemize}
+\subsection{WebSocketHandler}
+This module is related with the eMSP, the CPMS and also with the charging socket application. It manages all real time connection, and with the usage of "Rooms" it avoid broadcasting and can redirect all the massages to the desired receiver. Also this module simulates the charging process which, due to obvious infrastructural limitations, has not been fisically implemented. This module in general handles two processes:
+\begin{itemize}
+    \item \textbf{Booking verification process}: In this case the WebSocketHandler handles the event triggered by the charging socket application when a user scans the QRcode (phisically), then the user application listens for the confirmation event. The process is designed in such a way that only the desired user receives the confirmation message, this is possible thanks to the concept of "Rooms" implemented in the Socket.io library.
+    \item \textbf{Vehicle charging process}: This process is more complex, in fact the server must simulate the charging process by keeping synced the information between the CPMS (if someone is monitoring the station) and the end user. To do this several mechanisms have been implemented. Also the server must grant the charging service when the CPO is away.
+\end{itemize}
+\section{Client side}
+\subsection{CPO App}
+The CPO app is developed entirely using React.js and is composed almost only by components in the \textbf{src/Components} folder. The main components are the five main menus (BatteryMenu, DSOMenu, HomeMenu, StationsMenu, UserMenu) and also the two components that represent the login and the registration. All the other components are only auxiliaries. In the \textbf{src} folder we have also the App component which is the entry point for the execution of the applications. Another key element of the application are the Contexts (\textbf{src/Contexts}) which are very usefull to manage the data access and scope in the whole application.
+\subsection{Charging socket interface}
+This App is a simple android application that simulates the charging socket, it only implements a WebSocket client which emits event to the server to notify that a user has just scanned a QRCode. The application contains only two files that are respectively the two menues available inside the App: the main menu and the hidden settings menu, which is for simulation and development only.
+\subsection{EndUser App}
+The core of the endUser App is collocated in the lib folder. You notice three main folders: \textbf{model}, \textbf{view}, \textbf{controller}.
+\begin{itemize}
+    \item \textbf{Model}: contains class structures.
+    \item \textbf{View}: contains all the application graphics (e.g., various screens).
+    \item \textbf{Controller}: contains all the classes related to the handling of HTTP requests and answers.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

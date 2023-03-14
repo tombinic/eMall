@@ -1,0 +1,174 @@
+\chapter{Introduction}
+\section{Purpose}
+This document represents the \textbf{R}equirements \textbf{A}nalysis and \textbf{S}pecification \textbf{D}ocument (RASD). Its purpose is to present a thorough and meticulous description of the e-Mobility for All (eMall) system in terms of functional and non-functional requirements highlighting real possible use cases, system limits and constraints and finally end users interaction. The following document it is also a strong baseline for project planning and for a future software evaluation.\\
+
+The audience of this document includes end users that are mostly interested in an high level description of the features and developers who have to implement the requirements presented in this document.
+\subsection{Goals}
+\label{sec:goals}
+Nowadays, the urban and sub-urban mobility is one of the main causes of pollution which afflicts our planet, so to reduce the carbon footprint the usage of electric vehicles is encouraged as much as possible. The main goal of eMall is to help the spreading of this kind of transports focusing on the following general points:
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{b8c8d5}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{b8c8d5}\textbf{Goal}} & \multicolumn{1}{c|}{\cellcolor[HTML]{b8c8d5}\textbf{Description}} \\ \hline
+G.1 \label{G.1}& \begin{tabular}[c]{@{}l@{}}Allow end users to find a most suitable charging station for them, according to \\ various criteria.\end{tabular} \\ \hline
+G.2 \label{G.2}& Allow end users to make bookings and manage them. \\ \hline
+G.3 \label{G.3}& Allow end users to start/monitor/stop the charging process. \\ \hline
+G.4 \label{G.4}& Allow end users to automatically pay for a charge. \\ \hline
+G.5 \label{G.5}& \begin{tabular}[c]{@{}l@{}}Allow the charging station administrators to monitor various information about their\\ charging stations as the internal and external status.\end{tabular} \\ \hline
+G.6 \label{G.6}& \begin{tabular}[c]{@{}l@{}}Allow the charging station administrators to retrieve information about the price\\ from the energy providers also choosing which supplier to buy from.\end{tabular} \\ \hline
+G.7 \label{G.7}& \begin{tabular}[c]{@{}l@{}}Allow the charging station administrators to decide how to use purchased energy\\ and also decide its selling price.\end{tabular} \\ \hline
+\end{tabular}
+}
+\end{table}
+\clearpage
+\section{Scope}
+Electric mobility for All (eMall) is a \textbf{user-friendly} application which is intended to facilitate the use of the system to electric vehicle owners and charging station administrators.\\
+To reach these goals, the application provides an interface for end users that allows them \textbf{to search for a nearby charging station} that has a certain type of charging sockets (slow, fast, rapid), visualizing also its special offers. Consequently, end users \textbf{can charge their vehicles} in a specific station by reserving a time slot receiving a notification when the charge is completed. This feature allows to avoid traffic at the station and reduce the simultaneous presence of vehicles. The system also provides a full integrated payment system that enables end users to pay for the service.\\
+The software also proposes a very smart feature: indeed, is able to proactively suggest the user to go and charge the vehicle, depending on the status of the
+battery, his schedule, any special offers available, and the availability of charging slots at the identified stations.\\
+The platform includes also a charging station management system which is used by the charging station administrators \textbf{to manage the infrastructure (batteries, etc) of charging stations} and, moreover, it has the possibility to buy the energy from $3^{rd}$ parties in the smartest possible way and distribute it to end user vehicles. The management system will also \textbf{keep track of the internal and external status} of each charging station respecting the physical constraints of the infrastructure.
+\subsection{World phenomena}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{b8c8d5} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{b8c8d5}\textbf{World Phenomena}} & \multicolumn{1}{c|}{\cellcolor[HTML]{b8c8d5}\textbf{Description}} \\ \hline
+WP.1 & The end user needs to charge his vehicle.               \\ \hline
+WP.2 & The end user drives to the chosen charging station.     \\ \hline
+WP.3 & The end user plugs in the cable in the designated charging socket. \\ \hline
+WP.4 & The end user unplugs the charging cable.                \\ \hline
+WP.5 & The end user leaves the charging station.              \\ \hline
+WP.6 & \begin{tabular}[c]{@{}l@{}}The charging station administrator owns the charging station.\end{tabular}      \\ \hline
+\end{tabular}
+}
+\end{table}
+
+\subsection{Shared phenomena}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{b8c8d5} 
+\textbf{Shared Phenomena} & \multicolumn{1}{c|}{\cellcolor[HTML]{b8c8d5}\textbf{Description}} \\ \hline
+SP.1 & \begin{tabular}[c]{@{}l@{}}The system shows charging stations nearby, their cost \\ and any special offer they have.\end{tabular} \\ \hline
+SP.2 & The end user can book a time slot at the charging station. \\ \hline
+SP.3 & The end user can start the charging process. \\ \hline
+SP.4 & \begin{tabular}[c]{@{}l@{}}The end user can pay for the service, then he receives the invoice\\ through an email. \end{tabular}\\ \hline
+SP.5 & \begin{tabular}[c]{@{}l@{}}The system suggests the most suitable charging station\\ for a certain end user.\end{tabular} \\ \hline
+SP.6 & \begin{tabular}[c]{@{}l@{}}The charging station administrator acquires energy from energy providers\\ dinamically chosen.\end{tabular} \\ \hline
+SP.7 & \begin{tabular}[c]{@{}l@{}}The charging station administrator or the system decide whether\\ or not to buy energy or use batteries.\end{tabular} \\ \hline
+SP.8 & \begin{tabular}[c]{@{}l@{}}The system allows the charging station administrator to know\\ about the status of his charging stations.\end{tabular} \\ \hline
+SP.9 & \begin{tabular}[c]{@{}l@{}}The interaction between the end user and the charging socket\\ happens through a QR-Code scan.\end{tabular} \\ \hline
+\end{tabular}
+}
+\end{table}
+\section{Definitions, Acronyms, Abbreviations}
+\subsection{Definitions}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{B8C8D5} 
+\textbf{Term}    & \multicolumn{1}{c|}{\cellcolor[HTML]{B8C8D5}\textbf{Definition}}        \\ \hline
+End user        & \begin{tabular}[c]{@{}l@{}}Identifies electric vehicles owners who use the service, \\ can also be referred as user.\end{tabular}                \\ \hline
+Charging station & Place of charging of electric vehicles.                                 \\ \hline
+Charging Station available &\begin{tabular}[c]{@{}l@{}} At the moment at least one socket is free.\end{tabular} \\ \hline
+Charging Station not available &\begin{tabular}[c]{@{}l@{}} At the moment all the sockets are occupied.\end{tabular} \\ \hline
+Charging socket  & Single charging point.                                                  \\ \hline
+Booking   &  \begin{tabular}[c]{@{}l@{}}Reserved time slot in a specific station for \\charging vehicles. It also can be referred to as Reservation.\end{tabular}     \\ \hline
+Time slot        & Slot of time in which customers can charge their vehicles.               \\
+\hline
+QR-Code &  \begin{tabular}[c]{@{}l@{}} A QR-code is a type of matrix barcode (or two-dimensional barcode). \end{tabular}  \\ \hline
+System &
+  \begin{tabular}[c]{@{}l@{}}Set of hardware and software tools that provide the \\ desired service. It can be considered as eMall,\\ Application and Platform.\end{tabular} \\ \hline
+  Internal status &
+  \begin{tabular}[c]{@{}l@{}}For internal status of a charging station: the \\ amount of energy available in its batteries, the number \\ of vehicles being charged and, for each charging vehicle, \\the amount of power absorbed and time left to the end\\ of the charge. \end{tabular} \\ \hline
+    External status &\begin{tabular}[c]{@{}l@{}}For external status of a charging station:\\the number of charging sockets available, their type \\ such as slow/fast/rapid, their cost, and, if all sockets\\ of a certain type are occupied, the estimated amount \\of time until the first socket of that type is freed. \end{tabular} \\ \hline
+\end{tabular}
+}
+\end{table}
+
+\subsection{Acronyms}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{B8C8D5} 
+\textbf{Acronyms} & \multicolumn{1}{c|}{\cellcolor[HTML]{B8C8D5}\textbf{Meaning}} \\ \hline
+eMall             & e-Mobility for All                                            \\ \hline
+eMSP              & e-Mobility Service Provider                                   \\ \hline
+CPO               & Charging Point Operator                                       \\ \hline
+CPMS              & Charging Point Management System                              \\ \hline
+DSO               & Distribution System Operator                                  \\ \hline
+API               & Application Programming Interface                             \\ \hline
+GPS               & Global Positioning System                                     \\ \hline
+PC                & Personal Computer                                             \\ \hline
+HTTPS             & Hyper Text Transfer Protocol Secure                           \\ \hline
+HTTP          & Hyper Text Transfer Protocol                           \\ \hline
+WiFi              & Wireless Fidelity                                             \\ \hline
+LTE                & Long Term Evolution \\ \hline
+3G                & Third-Generation Wireless                                     \\ \hline
+4G                & Fourth-Generation Wireless                                    \\ \hline
+5G                & Fifth-Generation Wireless                                     \\ \hline
+SSL               & Secure Socket Layer                                           \\ \hline
+SHA-256           & Secure Hash Algorithm                                          \\ \hline
+SCA               & Strong Customer Authentication                                  \\ \hline
+a.m.               & Ante Meridiem                                                  \\ \hline
+p.m.               & Post Meridiem                                                  \\ \hline
+\end{tabular}
+
+\end{table}
+\subsection{Abbreviations}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\rowcolor[HTML]{B8C8D5} 
+\textbf{Abbreviations} & \multicolumn{1}{c|}{\cellcolor[HTML]{B8C8D5}\textbf{Meaning}} \\ \hline
+WP & World Phenomena  \\ \hline
+SP & Shared Phenomena \\ \hline
+G  & Goal             \\ \hline
+R  & Requirement             \\ \hline
+NFR  & Non Functional Requirement             \\ \hline
+D  & Domain Assumption             \\ \hline
+w.r.t. & with reference to \\ \hline
+e.g. & exempli gratia \\ \hline
+i.e. & id est \\ \hline
+etc. & etcetera \\ \hline
+\end{tabular}
+\end{table}
+\subsection{Important terminology}
+\begin{itemize}
+    \item The \textbf{CPO} is the charging station’s administrator and owner (for example an e-mobility company).
+    \item The \textbf{eMSP} is the system module which interfaces with the end users, it includes services and a mobile application.
+    \item The \textbf{CPMS} is the system module which interfaces with the CPOs, and manages the charging stations.
+\end{itemize}
+The eMall platform provides both a CPMS and an eMSP modules.
+%\section{Revision History}
+\section{Reference Documents}
+\begin{itemize}
+    \item \emph{Course slides on WeeBeep.}
+    \item \emph{RASD assignament document.}
+    \item \emph{RASD review by Prof. M. Camilli.}
+\end{itemize}
+
+\section{Document Structure}
+The structure of this RASD document is the following:
+\begin{enumerate}
+    \item \textbf{Introduction}: In this section is presented the purpose of this document highlighting in particular the main goals, the audience which is referred to, the identification of the product and application domain  describing world and shared phenomena and, lastly, the terms definitions.
+    \item \textbf{Overall Description}: This chapter describes the possible scenarios of the platform, the shared phenomena presented at the beginning of the document and assumptions on the domain of the application.
+    \item \textbf{Specific Requirements}: Includes all the requirements in a more specific way than the "Overall Description" section. Moreover, it is useful to show functional requirements in terms of use cases diagrams, sequence/activity diagrams.
+    \item \textbf{Formal Analysis Using Alloy}: Includes Alloy models which are used for the description of the application domain and his properties, referring to the operations which the system has to provide.
+    \item \textbf{Effort Spent}: This section shows the effort spent in terms of time for each team member and the whole team.
+    \item \textbf{References}: Includes all documents that were helpful in drafting the RASD.
+\end{enumerate}

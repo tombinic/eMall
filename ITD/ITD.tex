@@ -1,0 +1,29 @@
+\documentclass[a4paper, 11pt, oneside, openright, english]{memoir}
+\usepackage{booktabs}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+\usepackage{xcolor}
+\definecolor{poliblu}{RGB}{184, 200, 213}
+\usepackage{multirow}
+\usepackage{style/style}
+\usepackage[super]{nth}
+\usepackage{longtable}
+\usepackage{graphicx,subfigure}
+\usepackage{listings}
+
+
+\begin{document}
+\include{intro/title_page}
+    \include{intro/version_history}
+	\pagenumbering{Roman}
+
+	\tableofcontents
+	\pagenumbering{arabic}
+        \include{chapters/01_introduction.tex}
+        \include{chapters/02_requirements.tex}
+        \include{chapters/03_adopted_development_framework.tex}
+        \include{chapters/04_source_code_structure.tex}
+        \include{chapters/05_testing.tex}
+        \include{chapters/06_installation_instruction.tex}
+        \include{chapters/07_effort_spent}
+        \include{chapters/08_references}
+\end{document}

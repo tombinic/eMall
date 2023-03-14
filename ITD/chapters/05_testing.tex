@@ -1,0 +1,98 @@
+\chapter{Testing}
+The software testing procedure has progressed with a main emphasis on unit testing. Below is displayed a brief overview of the key evaluations carried out. Due to limited time, the assessment stage has been centered on the server aspect. No unit assessments were performed on the applications, as they are lightweight clients and a majority of the reasoning resides within the server.
+\section{Unit Testing on emspHandler}
+\subsubsection{Insert payment method}
+\begin{itemize}
+    \item Valid insertion of a new payment method with correct data.
+    \item Attempt to insert a new payment method which has an invalid username.
+    \item Attempt to enter a new payment method that has data that already exists.
+\end{itemize}
+\subsubsection{Insert booking}
+\begin{itemize}
+    \item Valid insertion of a new booking with correct data.
+    \item Attempt to insert a new booking which has timeslots and date overlapping.
+    \item Attempt to insert a new booking which has an invalid username.
+    \item Attempt to insert a new booking in a charging station with an id that doesn't exist.
+    \item Attempt to insert a new booking in a charging station where that type of charging socket does not exist.
+\end{itemize}
+\subsubsection{Search for nearby charging station}
+\begin{itemize}
+    \item Attempt to insert correct latitude and longititude.
+    \item Attempt to insert invalid or not existing latitude and longititude.
+\end{itemize}
+\subsubsection{Get personal information}
+\begin{itemize}
+    \item Valid fetch of the personal information of an existing user.
+    \item Attempt to fetch the the personal information of a not existing user.
+\end{itemize}
+\subsubsection{Get booking data}
+\begin{itemize}
+    \item Valid fetch of the booking data thanks to charging station id and socket type.
+    \item Attempt to fetch the booking data with invalid charging station id and valid socket type.
+    \item Attempt to fetch the booking data with valid charging station id and invalid socket type.
+    \item Attempt to fetch the booking data with invalid charging station id and invalid socket type.
+    \item Valid fetch of the booking data thanks to user id.
+    \item Attempt to fetch the booking data with invalid user id.
+\end{itemize}
+\subsubsection{Delete booking data}
+\begin{itemize}
+    \item Valid deletion of booking thanks to booking id.
+    \item Attempt to delete a booking with invalid booking id.
+\end{itemize}
+\subsubsection{Delete payment method}
+\begin{itemize}
+    \item Valid deletion of payment method thanks to user id and card number.
+    \item Attempt to delete a payment method with valid user id and invalid card number.
+\end{itemize}
+\subsubsection{Update user password}
+\begin{itemize}
+    \item Valid update of the user's password.
+    \item Attempt to update the password with an invalid old password and valid user.
+    \item Attempt to update the password with a valid old password and invalid user.
+    \item Attempt to update the password with an invalid old password and invalid user.
+\end{itemize}
+\subsubsection{Update user email}
+\begin{itemize}
+    \item Valid update of the user's email.
+    \item Attempt to update the password with an invalid user.
+\end{itemize}
+\subsubsection{Update user name and surname}
+\begin{itemize}
+    \item Valid update of the user's name and surname.
+    \item Attempt to update name and surname with an invalid user.
+\end{itemize}
+\section{Unit Testing on cpmsHandler}
+\subsubsection{Get charging station data}
+\begin{itemize}
+    \item Valid fetch of the charging station data thanks to CPO id.
+\end{itemize}
+\subsubsection{Get DSO data}
+\begin{itemize}
+    \item Valid fetch of the DSO data.
+\end{itemize}
+\subsubsection{Update CPO data}
+\begin{itemize}
+    \item Valid update of the CPO desired data.
+    \item Attempt to update CPO data with 'nothashed' password.
+\end{itemize}
+\subsubsection{Insert charging station}
+\begin{itemize}
+    \item Valid insert of a new charging station.
+    \item Attempt to insert a new charging station with invalid CPO id.
+\end{itemize}
+\subsubsection{Update dso contract}
+\begin{itemize}
+    \item Valid update DSO contract.
+\end{itemize}
+\subsubsection{Update charging mode}
+\begin{itemize}
+    \item Valid update of charging mode.
+    \item Attempt to update charging mode with an invalid charging station id and valid mode.
+\end{itemize}
+\subsubsection{Update battery percentage}
+\begin{itemize}
+    \item Valid update of battery percentage.
+    \item Attempt to update charging mode with an invalid charging station id and valid percentage.
+\end{itemize}
+\section{webSocketHandler testing}
+This module has been tested using \textbf{Postman} which supports a beta functionality to test the WebSocket protocol by emitting and receiving events. In particular, \textbf{Postman} supports the Socket.io implementation.

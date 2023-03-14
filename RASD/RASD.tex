@@ -1,0 +1,27 @@
+\documentclass[a4paper, 11pt, oneside, openright, english]{memoir}
+\usepackage{booktabs}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+\usepackage{xcolor}
+\definecolor{poliblu}{RGB}{184, 200, 213}
+\usepackage{multirow}
+\usepackage{style/style}
+\usepackage[super]{nth}
+\usepackage{longtable}
+\usepackage{graphicx,subfigure}
+\usepackage{listings}
+\usepackage{style/alloy}
+
+\begin{document}
+	\include{intro/title_page}
+    \include{intro/version_history}
+	\pagenumbering{Roman}
+
+	\tableofcontents
+	\pagenumbering{arabic}
+	\include{chapters/01_introduction}
+	\include{chapters/02_overall_description}
+	\include{chapters/03_specific_requirements}
+	\include{chapters/04_alloy}
+	\include{chapters/05_effort_spent}
+	\include{chapters/06_references}
+\end{document}

@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91635053/225157989-31b6f961-160a-4e2d-8953-59d11976b23d.png" alt="alt text" width="100">
 
-👬 Thanks to [Bertogalli Andrea](https://github.com/KavaTappi) and [Balestrieri Niccolò](https://github.com/KavaTappi)
+👬 Thanks to [Bertogalli Andrea](https://github.com/andberto) and [Balestrieri Niccolò](https://github.com/NiccoloBalestrieri)
 
 > The electric mobility (e-Mobility) system aims to reduce the carbon footprint in urban and suburban transportation. e-Mobility Service Providers (eMSPs) provide services such as locating charging stations, booking a charging time slot, starting and finishing the charging process, and paying for the service. Charging stations are owned and managed by Charging Point Operators (CPOs) through the Charge Point Management System (CPMS), which handles energy acquisition from Distribution System Operators (DSOs) and distributes it to connected vehicles. The CPMS also makes decisions such as the cost of charging and the energy source to be used. The CPOs offer functions such as locating charging stations, starting and monitoring the charging process, acquiring energy information, and deciding on energy sources. The interaction between eMSPs, CPOs, and DSOs occurs through uniform APIs, allowing users to access a variety of charging options.
 

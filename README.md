@@ -66,20 +66,20 @@ Firstly, create the database going to ```DBMS``` folder and import the eMall.sql
 <table style="padding:10px">
   <tr>
     <td> 
-         <img src="https://user-images.githubusercontent.com/91635053/225152558-d3712669-9479-431b-b6f4-7d285105dbb8.png"  alt="1" width = 279px height = 550px ></td>
+         <img src="https://user-images.githubusercontent.com/91635053/225152558-d3712669-9479-431b-b6f4-7d285105dbb8.png"  alt="1" width = 285px height = 550px ></td>
       
- <td><img src="https://user-images.githubusercontent.com/91635053/225152563-e37667a4-910e-4809-b3cd-15be2f07a3c4.png" align="right" alt="2" width = 279px height = 550px></td>
-   <td><img src="https://user-images.githubusercontent.com/91635053/225152568-65f91893-aad6-408b-9634-664d1c64d79c.png" alt="3" width = 288px height = 550px></td>
+ <td><img src="https://user-images.githubusercontent.com/91635053/225152563-e37667a4-910e-4809-b3cd-15be2f07a3c4.png" align="right" alt="2" width = 285px height = 550px></td>
+   <td><img src="https://user-images.githubusercontent.com/91635053/225152568-65f91893-aad6-408b-9634-664d1c64d79c.png" alt="3" width = 285px height = 550px></td>
   </tr>
 </table>
 
 <table style="padding:10px">
   <tr>
     <td> 
-         <img src="https://user-images.githubusercontent.com/91635053/225152571-e3bc21c1-6daf-4c7a-bfef-c96bf74a3bb1.png"  alt="1" width = 279px height = 550px ></td>
+         <img src="https://user-images.githubusercontent.com/91635053/225152571-e3bc21c1-6daf-4c7a-bfef-c96bf74a3bb1.png"  alt="1" width = 285px height = 550px ></td>
       
- <td><img src="https://user-images.githubusercontent.com/91635053/225152573-90035fc5-0db2-4ca4-966f-244ce69009ed.png" align="right" alt="2" width = 279px height = 550px></td>
-   <td><img src="https://user-images.githubusercontent.com/91635053/225152578-57ef450e-dd22-4238-9d12-68ab50fbf633.png" alt="3" width = 288px height = 550px></td>
+ <td><img src="https://user-images.githubusercontent.com/91635053/225152573-90035fc5-0db2-4ca4-966f-244ce69009ed.png" align="right" alt="2" width = 285px height = 550px></td>
+   <td><img src="https://user-images.githubusercontent.com/91635053/225152578-57ef450e-dd22-4238-9d12-68ab50fbf633.png" alt="3" width = 285px height = 550px></td>
   </tr>
 </table>
 
@@ -87,10 +87,10 @@ Firstly, create the database going to ```DBMS``` folder and import the eMall.sql
 <table style="padding:10px">
   <tr>
     <td> 
-         <img src="https://user-images.githubusercontent.com/91635053/225152580-dfa959bc-49d2-4f29-bcbc-cfc1db3dbb09.png"  alt="1" width = 279px height = 550px ></td>
+         <img src="https://user-images.githubusercontent.com/91635053/225152580-dfa959bc-49d2-4f29-bcbc-cfc1db3dbb09.png"  alt="1" width = 285px height = 550px ></td>
       
- <td><img src="https://user-images.githubusercontent.com/91635053/225152583-a0d713ab-b48c-421a-9b8b-c5947f979bd9.png" align="right" alt="2" width = 279px height = 550px></td>
-   <td><img src="https://user-images.githubusercontent.com/91635053/225152586-fe060d93-ca4d-4000-9873-dc564e059cec.png" alt="3" width = 288px height = 550px></td>
+ <td><img src="https://user-images.githubusercontent.com/91635053/225152583-a0d713ab-b48c-421a-9b8b-c5947f979bd9.png" align="right" alt="2" width = 285px height = 550px></td>
+   <td><img src="https://user-images.githubusercontent.com/91635053/225152586-fe060d93-ca4d-4000-9873-dc564e059cec.png" alt="3" width = 285px height = 550px></td>
   </tr>
 </table>
 

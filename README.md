@@ -15,7 +15,7 @@
   - 📱 [End User Application](#end-user-application-)
      - [Mockups](#mockups)
   - 📱 [Charging Socket Application](#charging-socket-application-)
-  - ✉️ [Our contacts](#our-contacts-)
+  - 📩 [Our contacts](#our-contacts-)
 ---
 
 ## Quick start ⚡
@@ -108,7 +108,7 @@ Firstly, create the database going to ```DBMS``` folder and import the eMall.sql
  - Install the apk that is situated in  ```Code/APKs/ChargingSocket.apk```
  - Otherwise, open the project in ```Code/ChargingSocket``` and build it manually on an emulator
       
-## Our contacts ✉️
+## Our contacts 📩
  - Andrea Bertogalli (andrea.bertogalli@mail.polimi.it)
  - Niccolò Balestrieri (niccolo.balestrieri@mail.polimi.it)
  - Nicolò Tombini (nicolo.tombini@mail.polimi.it)

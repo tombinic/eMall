@@ -111,7 +111,7 @@ Firstly, create the database going to ```DBMS``` folder and import the eMall.sql
 ## Our contacts ✉️
  - Andrea Bertogalli (andrea.bertogalli@mail.polimi.it)
  - Niccolò Balestrieri (niccolo.balestrieri@mail.polimi.it)
- - Andrea Bertogalli (nicolo.tombini@mail.polimi.it)
+ - Nicolò Tombini (nicolo.tombini@mail.polimi.it)
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91635053/225158039-6c7f4dfe-63e8-4948-8788-a0387274c957.png" alt="alt text" width="150>

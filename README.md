@@ -60,7 +60,7 @@ Firstly, create the database going to ```DBMS``` folder and import the eMall.sql
 ## End User Application 📱
  - Install the apk that is situated in ```Code/APKs/eMallUser.apk```
  - Otherwise, open the project in ```Code/end_user_app``` and build it manually on an emulator
- - Remember to set you google maps api key under ```Code/end_user_app/android/app/src/main/AndroidManifest.xml``
+ - Remember to set you google maps api key under ```Code/end_user_app/android/app/src/main/AndroidManifest.xml```
       
 ### Mockups
 <p align="center">
